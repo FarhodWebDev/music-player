@@ -1,0 +1,350 @@
+@font-face {
+ font-family: "shrift";
+ src: url(../fonts/RobotoSlab-Thin.ttf);
+}
+* {
+ box-sizing: border-box;
+ font-family: sans-serif;
+}
+#particles-js {
+ margin: 0;
+ padding: 0;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+ background: url("../img/nasa-Q1p7bh3SHj8-unsplash (1) 1.png");
+ background-position: center;
+ background-size: cover;
+ overflow: hidden;
+}
+.container {
+ width: 370px;
+ height: 580px;
+ color: white;
+ -webkit-box-shadow: 0px 0px 50px 20px rgba(34, 60, 80, 0.26);
+ -moz-box-shadow: 0px 0px 50px 20px rgba(34, 60, 80, 0.26);
+ box-shadow: 0px 0px 50px 20px rgba(140, 164, 182, 0.26);
+ border-radius: 15px;
+ padding: 2rem;
+ position: absolute;
+ margin: 0 auto !important;
+}
+#bars {
+ position: absolute;
+ top: 15px;
+ left: 20px;
+ font-size: 20px;
+ z-index: 999;
+ cursor: pointer;
+}
+.hidden {
+ display: none !important;
+}
+.menu {
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 200px;
+ height: 0px;
+ background-color: black;
+ background: url(../img/bg-3.png);
+ background-position-x: -30px;
+ object-fit: cover;
+ z-index: -1;
+ transition: all 0.5s ease;
+ opacity: 0;
+ border-radius: 15px 0px 10px 0px;
+ padding: 40px 0px;
+ padding-left: 35px;
+ text-align: left;
+ font-size: 15px;
+ overflow: hidden;
+ animation: anime 5s infinite;
+}
+
+.menu.show {
+ opacity: 1;
+ z-index: 10;
+ height: 50%;
+}
+
+@keyframes anime {
+ 0% {
+  background-position-y: 30%;
+ }
+ 20% {
+  background-position-y: 0%;
+ }
+ 40% {
+  background-position-y: 200%;
+ }
+ 60% {
+  background-position-y: -500%;
+ }
+ 80% {
+  background-position-y: -50%;
+ }
+ 100% {
+  background-position-y: 30%;
+ }
+}
+
+.musics {
+ height: 300px;
+ opacity: 1;
+ z-index: 99;
+ top: 0;
+ left: 0;
+ box-shadow: 5px 5px 5px 1px rgba(255, 255, 255, 0.288);
+}
+ul li {
+ margin: 13px 0px;
+ cursor: pointer;
+}
+
+.fa-music {
+ position: absolute;
+ left: 10px;
+ font-size: 14px;
+}
+.exit {
+ position: absolute;
+ top: 15px;
+ right: 20px;
+ font-size: 20px;
+ cursor: pointer;
+}
+#title {
+ height: 60px;
+ font-family: "shrift";
+ letter-spacing: 1px;
+ font-size: 30px;
+}
+.image-container {
+ width: 200px;
+ height: 200px;
+ margin: auto;
+ margin: 50px auto 50px;
+}
+.image-container img {
+ width: inherit;
+ height: inherit;
+ border-radius: 100%;
+ object-fit: cover;
+ animation: imageRotate 10s linear infinite;
+ animation-play-state: paused;
+}
+
+@keyframes imageRotate {
+ from {
+  transform: rotate(0);
+ }
+ to {
+  transform: rotate(360deg);
+ }
+}
+
+.container.play img {
+ animation-play-state: running;
+}
+#volume {
+ height: 3px;
+}
+.time {
+ display: flex;
+ width: 100%;
+ justify-content: space-between;
+ font-size: 1.3rem;
+}
+.progress-container {
+ background-color: white;
+ width: 100%;
+ margin: 1rem auto;
+ height: 6px;
+ cursor: pointer;
+ border-radius: 10px;
+}
+.progress {
+ height: inherit;
+ background-color: tomato;
+ width: 0;
+ border-radius: inherit;
+}
+.btn {
+ margin: 1rem;
+ border: none;
+ background-color: transparent;
+ color: white;
+ font-size: 1.5rem;
+ opacity: 0.7;
+ cursor: pointer;
+}
+.big {
+ font-size: 2rem;
+}
+
+/* particles */
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ outline: 0;
+ font-size: 100%;
+ vertical-align: baseline;
+ background: transparent;
+}
+body {
+ line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+ display: block;
+}
+nav ul {
+ list-style: none;
+}
+blockquote,
+q {
+ quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+ content: none;
+}
+a {
+ margin: 0;
+ padding: 0;
+ font-size: 100%;
+ vertical-align: baseline;
+ background: transparent;
+ text-decoration: none;
+}
+mark {
+ background-color: #ff9;
+ color: #000;
+ font-style: italic;
+ font-weight: bold;
+}
+del {
+ text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+ border-bottom: 1px dotted;
+ cursor: help;
+}
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+hr {
+ display: block;
+ height: 1px;
+ border: 0;
+ border-top: 1px solid #ccc;
+ margin: 1em 0;
+ padding: 0;
+}
+input,
+select {
+ vertical-align: middle;
+}
+li {
+ list-style: none;
+}
+
+#particles-js {
+ margin: 0;
+ padding: 0;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+ background: url("../img/nasa-Q1p7bh3SHj8-unsplash (1) 1.png");
+ background-position: center;
+ background-size: cover;
+ overflow: hidden;
+}
