@@ -145,6 +145,12 @@ window.addEventListener("keyup", (e) => {
   music.play();
   isPlaying = true;
  }
+
+ if (isPlaying) {
+  container.classList.add("play");
+ } else {
+  container.classList.remove("play");
+ }
 });
 
 window.addEventListener("click", () => {
